@@ -1,0 +1,63 @@
+using System;
+
+namespace Practica_4
+{
+	class MainClass
+	{
+		public static void Main(string[] args)
+		{
+			int men;
+			
+
+				Console.WriteLine("Menu de productos: \n");
+
+				Console.WriteLine("Elija  una opcion:\n");
+
+                                Console.WriteLine("1: ingresa un nuevo producto \n");
+				Console.WriteLine("2: Imprimir los productos \n");
+				
+				
+				men = int.Parse (Console.ReadLine());
+				switch(men)
+				{
+
+					case '1': 
+					Console.WriteLine("\tProducto nuevo \n");
+					
+                                        Console.WriteLine("\tIntroduce el nombre \n");
+					String nombre = Console.ReadLine();
+			                Console.WriteLine("Introduce el codigo \n");
+					String codigo = Console.ReadLine();
+					Console.WriteLine("Introduce la descripción \n");
+					String descripción = Console.ReadLine();
+
+					String registro = nombre + "," + "" + codigo +","+ "" + descripción + "\n";
+
+					url = "Archivo de productos.txt";
+					Archivo archivo1 = new Archivo(url);
+
+                    
+                		        archivo1.escribir( registro ); 
+                		        archivo1.leer();
+
+					System.Console.Read();
+					break;
+
+					case '2':
+
+                                        Console.Write("imprime el producto \n");
+					string url = "Archivo de productos.txt";
+					Archivo archivo = new Archivo(url);
+					archivo.leer(); 
+					break;
+
+					
+			}
+                   
+		
+		}
+	}
+}
+
+
+
